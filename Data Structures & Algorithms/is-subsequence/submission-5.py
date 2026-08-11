@@ -1,0 +1,16 @@
+class Solution:
+    def isSubsequence(self, s: str, t: str) -> bool:
+        if len(s) > len(t):
+            return False
+
+        n = len(s) - 1
+        i = 0
+
+        for char in t:
+            if char == s[i]:
+                i += 1
+
+            if i == n:
+                return True
+
+        return False
